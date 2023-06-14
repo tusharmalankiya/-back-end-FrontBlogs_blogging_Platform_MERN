@@ -24,7 +24,8 @@ module.exports.blogs_get = async (req, res) => {
         // console.log(dataObj);
         data.push(dataObj);
       });
-      res.status(200).render("index", { blogs: data });
+      res.status(200).json(data);
+      // res.status(200).render("index", { blogs: data });
     })
     .catch((err) => {
       console.log(err);
